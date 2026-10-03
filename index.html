@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اختبار مادة الأحياء | الأيض الخلوي والتنفس</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>منصة الشمس التعليمية</h1>
+      <p class="dr-name">إعداد الدكتور صهيب موفق عزيز</p>
+      <p class="lesson-tag">اختبار شامل: الأيض الخلوي والتنفس (100 سؤال)</p>
+    </header>
+
+    <!-- شاشة البداية -->
+    <div id="start-screen" class="card text-center">
+      <h2>تعليمات الاختبار</h2>
+      <p>يحتوي هذا الاختبار على 100 سؤال متعدد الخيارات تغطي موضوع الأيض الخلوي والتנفس.</p>
+      <p><strong>مدة الاختبار:</strong> ساعة واحدة (60 دقيقة).</p>
+      <p>ملاحظة: لا يمكن الرجوع للسؤال السابق أو تغيير الإجابة بعد اختيارها، وتتغير أماكن الخيارات عشوائياً في كل محاولة.</p>
+      <button class="main-btn" onclick="startQuiz()">بدء الاختبار</button>
+    </div>
+
+    <!-- شاشة الاختبار -->
+    <div id="quiz-screen" class="card hidden">
+      <div class="quiz-info">
+        <span id="question-counter">السؤال: 1 / 100</span>
+        <span id="timer">الوقت المتبقي: 60:00</span>
+      </div>
+      <div id="question-container">
+        <h3 id="question-text">نص السؤال يظهر هنا...</h3>
+        <div id="options-container" class="options-list">
+          <!-- الخيارات تولد ديناميكياً -->
+        </div>
+      </div>
+    </div>
+
+    <!-- شاشة النتيجة النهائية -->
+    <div id="result-screen" class="card hidden text-center">
+      <h2>انتهى الاختبار</h2>
+      <p id="final-score-text">لقد حصلت على درجتك النهائية.</p>
+      <div id="score-display" class="score-badge">0 / 100</div>
+      <button class="main-btn" onclick="restartQuiz()">إعادة الاختبار</button>
+    </div>
+
+    <footer class="footer">
+      <p>منصة الشمس التعليمية © 2026</p>
+      <p>الدكتور صهيب موفق عزيز</p>
+      <a href="https://wa.me/9647700425408" class="whatsapp">للتواصل عبر واتساب: 07700425408</a>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
